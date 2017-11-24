@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<package>
+    <name>Urbit_InventoryFeed</name>
+    <version>1.0.2</version>
+    <stability>stable</stability>
+    <license uri="https://opensource.org/licenses/gpl-license">GPL</license>
+    <channel>community</channel>
+    <extends/>
+    <summary>Urbit Inventory Feed</summary>
+    <description>One of many methods of delivering product data to the Urb-it platform.</description>
+    <notes>Stable 1.0.2 version</notes>
+    <authors><author><name>Urb-it</name><user>Urb-it</user><email>support@urbit.com</email></author></authors>
+    <date>2017-11-22</date>
+    <time>09:35:32</time>
+    <contents><target name="magelocal"><dir name="Urbit"><dir name="InventoryFeed"><dir name="Block"><dir name="Form"><dir name="Field"><file name="Inventory.php" hash="59fad883f5698edcdffc310c039c2414"/></dir></dir></dir><dir name="Helper"><file name="Data.php" hash="d3d31a3e4e5c301eaf9deb93b1b3af49"/><file name="Feed.php" hash="8f4dff813debec6676dbf8cd5156cef9"/></dir><dir name="Model"><dir name="Config"><file name="Abstract.php" hash="1e3d0d37dc76e35cb7c7731ee8224c77"/><file name="Attribute.php" hash="0a5648d756df6c59275d78e848380b23"/><file name="Category.php" hash="259650112caeb9c8c9251b378e307a51"/><file name="Tag.php" hash="9d6bbaf335cfd8b2e671265c1f3a5d8e"/></dir><file name="Config.php" hash="54eec2a5173e9aead147e1377521c0d1"/><file name="Cron.php" hash="8810d614e2e3d5db3657e24285bebbdd"/><dir name="Feed"><file name="Inventory.php" hash="44f31a9e1f3cca03d078cf1fd10772b4"/></dir><file name="Feed.php" hash="8014dbc4f976aa5149aa6978a55cde66"/><dir name="Form"><dir name="Field"><file name="Inventory.php" hash="1e4ae28e680c7d1527aec117f0334173"/></dir></dir><dir name="List"><file name="Product.php" hash="73f304fd846c1346d1a2677382c65daf"/></dir></dir><dir name="controllers"><dir name="Adminhtml"><file name="InventoryfeedbackendController.php" hash="8a43ec579007efd8367e2bc8f8701087"/></dir><file name="IndexController.php" hash="ae6795701e5d4ae4f0d8b1aae422c244"/></dir><dir name="etc"><file name="adminhtml.xml" hash="9f1effe67b9f9e26671c80e22a6a4303"/><file name="config.xml" hash="87734e85fab320ff22ba105c1d2b323e"/><file name="system.xml" hash="33c22bb07ee032088433e04b08dc3f18"/></dir></dir></dir></target><target name="mageetc"><dir name="modules"><file name="Urbit_InventoryFeed.xml" hash="6f5d10d872c1d834c56f2d85b37979ec"/></dir></target><target name="magedesign"><dir name="adminhtml"><dir name="default"><dir name="default"><dir name="layout"><dir name="urber"><file name="inventoryfeed.xml" hash="2b5787743e83ce6ff2befd40dcd9e593"/></dir></dir><dir name="template"><dir name="urbit"><dir name="inventoryfeed"><file name="inventoryfeedbackend.phtml" hash="08f57cc34b777c43f06cbf67a3a82663"/></dir></dir></dir></dir></dir></dir></target></contents>
+    <compatible/>
+    <dependencies><required><php><min>5.2.0</min><max>6.0.0</max></php></required></dependencies>
+</package>

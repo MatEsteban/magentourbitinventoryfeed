@@ -1,0 +1,98 @@
+<?xml version="1.0"?>
+<config>
+	<modules>
+		<Urbit_InventoryFeed>
+			<version>0.1.0</version>
+		</Urbit_InventoryFeed>
+	</modules>
+
+	<!-- FRONTEND -->
+
+	<frontend>
+		<routers>
+			<inventoryfeed>
+				<use>standard</use>
+				<args>
+					<module>Urbit_InventoryFeed</module>
+					<frontName>urbit_inventoryfeed</frontName>
+				</args>
+			</inventoryfeed>
+		</routers>
+		<layout>
+			<updates>
+				<inventoryfeed>
+					<file>urbit/inventoryfeed.xml</file>
+				</inventoryfeed>
+			</updates>
+		</layout>
+	</frontend>
+
+	<!-- GLOBAL -->
+
+	<global>
+		<helpers>
+			<inventoryfeed>
+				<class>Urbit_InventoryFeed_Helper</class>
+			</inventoryfeed>
+		</helpers>
+		<blocks>
+			<inventoryfeed>
+				<class>Urbit_InventoryFeed_Block</class>
+			</inventoryfeed>
+		</blocks>
+		<models>
+			<inventoryfeed>
+				<class>Urbit_InventoryFeed_Model</class>
+				<resourceModel>inventoryfeed_mysql4</resourceModel>
+			</inventoryfeed>
+            <inventoryfeed_form_inventory>
+                <class>Urbit_InventoryFeed_Block_Adminhtml_Entityname_Edit_Form_Renderer_Fieldset_Inventory</class>
+            </inventoryfeed_form_inventory>
+		</models>
+	</global>
+
+	<!-- ADMIN -->
+
+	<admin>
+		<routers>
+			<inventoryfeed>
+				<use>admin</use>
+				<args>
+					<module>Urbit_InventoryFeed</module>
+					<frontName>admin_inventoryfeed</frontName>
+				</args>
+			</inventoryfeed>
+		</routers>
+	</admin>
+
+	<!-- CRON -->
+
+	<crontab>
+		<jobs>
+			<inventoryfeed_generatefeed>
+				<schedule>
+					<cron_expr>* * * * *</cron_expr>
+				</schedule>
+				<run>
+					<model>inventoryfeed/cron::generateFeed</model>
+				</run>
+			</inventoryfeed_generatefeed>
+		</jobs>
+	</crontab>
+
+	<!-- CONFIG DEFAULTS -->
+
+	<default>
+		<inventoryfeed_config>
+			<cron>
+				<cache_duration>15</cache_duration>
+			</cron>
+			<filter>
+				<category></category>
+				<tag></tag>
+			</filter>
+			<fields>
+			</fields>
+		</inventoryfeed_config>
+	</default>
+</config>

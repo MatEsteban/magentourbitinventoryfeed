@@ -1,0 +1,123 @@
+<?xml version="1.0"?>
+<config>
+    <tabs>
+        <urbit translate="label"  module="inventoryfeed">
+            <label>Urbit</label>
+            <sort_order>200</sort_order>
+        </urbit>
+    </tabs>
+
+    <!-- Plugin config page fields -->
+
+    <sections>
+        <inventoryfeed_config translate="label" module="inventoryfeed">
+            <label>Inventory Feed</label>
+            <tab>urbit</tab>
+            <frontend_type>text</frontend_type>
+            <sort_order>200</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>
+            <groups>
+                <!-- Cache -->
+
+                <cron translate="label">
+                    <label>Feed Cache</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>1</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <cache_duration>
+                            <label>Cache duration</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment>Cache live time (in minutes)</comment>
+                        </cache_duration>
+                    </fields>
+                </cron>
+
+                <!-- Feed Data Filter -->
+
+                <filter translate="label">
+                    <label>Inventory Filter</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>2</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <category>
+                            <label>Categories</label>
+                            <frontend_type>multiselect</frontend_type>
+                            <source_model>inventoryfeed/config_category</source_model>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <can_be_empty>1</can_be_empty>
+                            <comment></comment>
+                        </category>
+                        <tag>
+                            <label>Tags</label>
+                            <frontend_type>multiselect</frontend_type>
+                            <source_model>inventoryfeed/config_tag</source_model>
+                            <sort_order>2</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <can_be_empty>1</can_be_empty>
+                            <comment></comment>
+                        </tag>
+                    </fields>
+                </filter>
+                <tax>
+                    <label>Taxes</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>3</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <tax_country>
+                            <label>Tax Country</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_country</source_model>
+                            <sort_order>17</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </tax_country>
+                    </fields>
+                </tax>
+
+                <!-- Associate feed fields with inventory attributes -->
+
+                <fields>
+                    <label>Inventory Fields</label>
+                    <sort_order>4</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <inventory>
+                            <label>Inventory</label>
+                            <backend_model>inventoryfeed/form_field_inventory</backend_model>
+                            <frontend_model>inventoryfeed/form_field_inventory</frontend_model>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <can_be_empty>1</can_be_empty>
+                            <comment></comment>
+                        </inventory>
+                    </fields>
+                </fields>
+            </groups>
+        </inventoryfeed_config>
+    </sections>
+</config>

@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+	<inventoryfeed_adminhtml_inventoryfeedbackend_index>
+		<reference name="content">
+			<block type="inventoryfeed/adminhtml_inventoryfeedbackend"
+			   	name="inventoryfeedbackend"
+			   	template="urbit/inventoryfeed/inventoryfeedbackend.phtml"
+			/>
+		</reference>
+	</inventoryfeed_adminhtml_inventoryfeedbackend_index>
+</layout>
