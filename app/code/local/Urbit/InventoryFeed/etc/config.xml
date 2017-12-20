@@ -65,6 +65,16 @@
 		</routers>
 	</admin>
 
+	 <adminhtml>
+        <layout>
+            <updates>
+                <urbit_inventoryfeed>
+                    <file>urbit_inventoryfeed.xml</file>
+                </urbit_inventoryfeed>                
+            </updates>
+        </layout>
+    </adminhtml>
+
 	<!-- CRON -->
 
 	<crontab>

@@ -73,6 +73,26 @@
                             <can_be_empty>1</can_be_empty>
                             <comment></comment>
                         </tag>
+                        <stock>
+                            <label>Minimal Stock</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>3</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment></comment>
+                        </stock>
+                        <product_id>
+                            <label>Product ID</label>
+                            <backend_model>inventoryfeed/form_field_fourthfilter</backend_model>
+                            <frontend_model>inventoryfeed/form_field_fourthfilter</frontend_model>
+                            <sort_order>4</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <can_be_empty>1</can_be_empty>
+                            <comment></comment>
+                        </product_id>
                     </fields>
                 </filter>
                 <tax>

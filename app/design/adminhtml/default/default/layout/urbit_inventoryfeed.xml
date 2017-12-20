@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<layout>
+    <adminhtml_system_config_edit >
+         <reference name="head">
+                <action method="addJs"><script>urbit/InventoryFeed/jquery-1.11.0.min.js</script></action>
+                <action method="addJs"><script>urbit/InventoryFeed/multiselect.min.js</script></action>
+                <action method="addCss"><stylesheet>urbit_inventoryfeed_admin.css</stylesheet></action>
+            </reference>
+    </adminhtml_system_config_edit>
+    <inventoryfeed_adminhtml_inventoryfeedbackend_index>
+        <reference name="content">
+            <block type="inventoryfeed/adminhtml_inventoryfeedbackend"
+                name="inventoryfeedbackend"
+                template="urbit/inventoryfeed/inventoryfeedbackend.phtml"
+            />
+        </reference>
+    </inventoryfeed_adminhtml_inventoryfeedbackend_index>
+</layout>
