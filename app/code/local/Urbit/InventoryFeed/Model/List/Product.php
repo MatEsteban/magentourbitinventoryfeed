@@ -90,9 +90,22 @@ class Urbit_InventoryFeed_Model_List_Product implements IteratorAggregate
             if ($filter['stock'] && $filter['stock'] > 0) {
                 $this->_products
                     ->joinField('qty', 'cataloginventory/stock_item', 'qty', 'product_id=entity_id', '{{table}}.stock_id=1', 'left')
-                    ->addAttributeToFilter('qty', array('gt' => $filter['stock']));
+                    ->addAttributeToFilter('qty', array('gteq' => $filter['stock']));
                 $this->_products->getSelect()->group('e.entity_id');
             }
+
+            /*
+             * result product filter
+             */
+            if ($filter['product_id'] && !empty(['product_id'])) {
+                $ids = explode(',', $filter['product_id']);
+                $this->_products->addAttributeToFilter('entity_id', array('in' => $ids));
+            }
+
+            /**
+             * type filter (show only simple product)
+             */
+            $this->_products->addAttributeToFilter('type_id', array('eq' => 'simple'));
         }
 
         return $this->_products;

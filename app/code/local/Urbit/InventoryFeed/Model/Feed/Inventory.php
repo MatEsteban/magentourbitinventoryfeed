@@ -158,10 +158,6 @@ class Urbit_InventoryFeed_Model_Feed_Inventory
      */
     public function process()
     {
-        if (!$this->isSimple) {
-            return false;
-        }
-
         $this->processId();
 
         $positive_quantity = ($this->isTableOption) ? $this->processTableOptions() : $this->processInventory();
